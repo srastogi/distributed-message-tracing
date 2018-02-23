@@ -1,0 +1,5 @@
+archivesBaseName = 'service3'
+
+dependencies {
+    compile('org.springframework.cloud:spring-cloud-starter-sleuth')
+}
