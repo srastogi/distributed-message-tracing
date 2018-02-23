@@ -1,0 +1,7 @@
+server.port: 9001
+spring.application.name: service2
+
+logging.level:
+    org.springframework.cloud.sleuth: DEBUG
+
+logging.file: serviceTwo.log
