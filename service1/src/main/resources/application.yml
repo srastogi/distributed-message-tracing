@@ -1,9 +1,13 @@
 server.port: 9000
-spring.application.name: service1
 
-logging.level:
+spring:
+  application.name: service1
+  sleuth.sampler.percentage: 1.0
+  zipkin:
+      locator.discovery.enabled: true
+      baseUrl: http://zipkin-server/
+
+logging:
+  file: serviceOne.log
+  level:
     org.springframework.cloud.sleuth: DEBUG
-
-spring.sleuth.sampler.percentage: 1.0
-
-logging.file: serviceOne.log

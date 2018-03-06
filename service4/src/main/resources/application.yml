@@ -1,7 +1,13 @@
 server.port: 9003
-spring.application.name: service4
 
-logging.level:
+spring:
+  application.name: service4
+  sleuth.sampler.percentage: 1.0
+  zipkin:
+      locator.discovery.enabled: true
+      baseUrl: http://zipkin-server/
+
+logging:
+  file: serviceFour.log
+  level:
     org.springframework.cloud.sleuth: DEBUG
-
-logging.file: serviceFour.log

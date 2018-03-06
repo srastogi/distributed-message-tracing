@@ -1,7 +1,13 @@
 server.port: 9002
-spring.application.name: service3
 
-logging.level:
+spring:
+  application.name: service3
+  sleuth.sampler.percentage: 1.0
+  zipkin:
+      locator.discovery.enabled: true
+      baseUrl: http://zipkin-server/
+
+logging:
+  file: serviceThree.log
+  level:
     org.springframework.cloud.sleuth: DEBUG
-
-logging.file: serviceThree.log

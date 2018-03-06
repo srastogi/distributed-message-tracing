@@ -1,4 +1,5 @@
 rootProject.name = 'distributed-message-tracing'
+include 'discovery-server'
 include 'service1'
 include 'service2'
 include 'service3'

@@ -16,4 +16,10 @@ public class Controller {
         String serviceFourResponse = restTemplate.getForObject("http://localhost:9003/serviceFour", String.class);
         return String.format("Hello from service 2! %s %s", serviceThreeResponse, serviceFourResponse);
     }
+
+    @GetMapping("/breakServiceTwo")
+    public String breakService() {
+        String serviceThreeResponse = restTemplate.getForObject("http://localhost:9002/breakServiceThree", String.class);
+        return String.format("Hello from service 2! %s", serviceThreeResponse);
+    }
 }
